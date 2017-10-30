@@ -1,2 +1,10 @@
-<h1>Movies#index</h1>
-<p>Find me in app/views/movies/index.html.erb</p>
+<h1>All Movies!</h1>
+<% @movies.each do |movie| %>
+    <img src="<%= movie.picture %>"> 
+    <h2><%= movie.title %> : </h2>
+    <p><%= movie.synopsis %></p>
+    <p><%= movie.year%></p>
+    <p><%= movie.genre%></p>
+    
+<%end%>
+
