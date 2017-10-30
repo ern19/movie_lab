@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  
   root to: 'movies#index'
   get 'movies/index'
 
@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   get 'movies/edit'
 
   get 'movies/show'
-
+  devise_for :users
   resources :movies
 end

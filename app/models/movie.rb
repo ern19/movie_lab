@@ -1,4 +1,5 @@
 class Movie < ApplicationRecord
+    
     include HTTParty
     base_uri "http://www.omdbapi.com/?apikey=d31f1a94&i="
     
@@ -14,5 +15,7 @@ class Movie < ApplicationRecord
                 year: response['Year'], 
                 genre: response['Genre'])
     end
+    has_many :favorite_movies
+    has_many :users, through: :favorite_movies
 end
 
